@@ -3,41 +3,44 @@
 		<title>Timetable</title>
 		<style>
 			@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 			* {
 				box-sizing: border-box;
 				text-align: center;
 				font-family: "Roboto", serif;
 			}
 
-			h1{
-				font-weight:900;
-				margin:0.5rem;
+			h1 {
+				font-weight: 900;
+				margin: 0.5rem;
 			}
 
 			body {
 				display: flex;
 				flex-direction: column;
-				justify-content:center;
-				align-items:center;
+				justify-content: center;
+				align-items: center;
 			}
 
 			table {
 				border-collapse: collapse;
 				width: 100%;
-				border: 1px solid #ccc;
-				font-size:0.8rem;
+				border: 3px solid #000;
+				font-size: 0.8rem;
 			}
 
 			th, td {
-				border: 1px solid #ccc;
+				border: 3px solid #000;
 				text-align: center;
 				width: 4rem;
 				height: 4rem;
 			}
 
-			thead th, tfoot th {
-				background: #222;
-				color: white;
+			/* Header and footer kept white */
+			thead th,
+			tfoot th {
+				background: #fff;
+				color: #000;
 			}
 
 			tbody tr:nth-child(odd) {
@@ -48,20 +51,51 @@
 				background: #cbd5e1;
 			}
 
-			.evs { background: #d9f2e6; }
-			.wt-lab { background: #fff3cd; }
-			.rm { background: #e3f0ff; }
-			.ai { background: #e3f7e8; }
-			.se { background: #eee7ff; }
-			.toc { background: #fff0df; }
-			.cns { background: #e2f8fa; }
-			.project { background: #f8e6fc; }
-			.yoga { background: #eeeeee; }
-			.break { background: #fbe4e4; }
+			.evs {
+				background: #d9f2e6;
+			}
+
+			.wt-lab {
+				background: #fff3cd;
+			}
+
+			.rm {
+				background: #e3f0ff;
+			}
+
+			.ai {
+				background: #e3f7e8;
+			}
+
+			.se {
+				background: #eee7ff;
+			}
+
+			.toc {
+				background: #fff0df;
+			}
+
+			.cns {
+				background: #e2f8fa;
+			}
+
+			.project {
+				background: #f8e6fc;
+			}
+
+			.yoga {
+				background: #eeeeee;
+			}
+
+			.break {
+				background: #fbe4e4;
+			}
 		</style>
 	</head>
+
 	<body>
 		<h1>TIMETABLE</h1>
+
 		<table>
 			<thead>
 				<tr>
@@ -96,34 +130,64 @@
 
 				<tr>
 					<th>Tuesday</th>
-					<td colspan="2" class="wt-lab">WT Lab<br>D3+D4<br>503</td>
-					<td class="rm">RM<br>MNS<br>519</td>
-					<td class="ai">AI<br>SL<br>519</td>
+					<td colspan="2" class="wt-lab">
+						WT Lab<br>D3+D4<br>503
+					</td>
+					<td class="rm">
+						RM<br>MNS<br>519
+					</td>
+					<td class="ai">
+						AI<br>SL<br>519
+					</td>
 					<td></td>
-					<td class="se">SE<br>GR<br>511</td>
-					<td class="toc">TOC<br>NT<br>511</td>
-					<td class="cns">CNS<br>GHS<br>511</td>
+					<td class="se">
+						SE<br>GR<br>511
+					</td>
+					<td class="toc">
+						TOC<br>NT<br>511
+					</td>
+					<td class="cns">
+						CNS<br>GHS<br>511
+					</td>
 					<td></td>
 				</tr>
 
 				<tr>
 					<th>Wednesday</th>
-					<td colspan="2" class="project">Minor Project</td>
+					<td colspan="2" class="project">
+						Minor Project
+					</td>
 					<td></td>
 					<td></td>
-					<td class="toc">TOC<br>NT<br>521</td>
-					<td class="ai">AI<br>SL<br>521</td>
-					<td class="se">SE<br>GR<br>521</td>
-					<td class="rm">RM<br>MNS<br>521</td>
+					<td class="toc">
+						TOC<br>NT<br>521
+					</td>
+					<td class="ai">
+						AI<br>SL<br>521
+					</td>
+					<td class="se">
+						SE<br>GR<br>521
+					</td>
+					<td class="rm">
+						RM<br>MNS<br>521
+					</td>
 					<td></td>
 				</tr>
 
 				<tr>
 					<th>Thursday</th>
-					<td colspan="2" class="cns">CNS Lab<br>D3+D4<br>527A</td>
-					<td class="toc">TOC<br>NT<br>525</td>
-					<td class="se">SE<br>GR<br>525</td>
-					<td class="cns">CNS<br>GHS<br>525</td>
+					<td colspan="2" class="cns">
+						CNS Lab<br>D3+D4<br>527A
+					</td>
+					<td class="toc">
+						TOC<br>NT<br>525
+					</td>
+					<td class="se">
+						SE<br>GR<br>525
+					</td>
+					<td class="cns">
+						CNS<br>GHS<br>525
+					</td>
 					<td></td>
 					<td></td>
 					<td></td>
@@ -133,12 +197,22 @@
 				<tr>
 					<th>Friday</th>
 					<td class="yoga">Yoga</td>
-					<td class="toc">TOC<br>NT<br>517</td>
-					<td class="se">SE<br>GR<br>517</td>
-					<td class="cns">CNS<br>GHS<br>517</td>
+					<td class="toc">
+						TOC<br>NT<br>517
+					</td>
+					<td class="se">
+						SE<br>GR<br>517
+					</td>
+					<td class="cns">
+						CNS<br>GHS<br>517
+					</td>
 					<td></td>
-					<td class="rm">RM<br>MNS<br>521</td>
-					<td class="ai">AI<br>SL<br>521</td>
+					<td class="rm">
+						RM<br>MNS<br>521
+					</td>
+					<td class="ai">
+						AI<br>SL<br>521
+					</td>
 					<td></td>
 					<td></td>
 				</tr>
@@ -147,7 +221,9 @@
 					<th>Saturday</th>
 					<td></td>
 					<td></td>
-					<td colspan="3" class="project">Minor Project</td>
+					<td colspan="3" class="project">
+						Minor Project
+					</td>
 					<td></td>
 					<td></td>
 					<td></td>
@@ -156,7 +232,9 @@
 			</tbody>
 
 			<tfoot>
-				<tr><th colspan="11">End of Timetable</th></tr>
+				<tr>
+					<th colspan="11">End of Timetable</th>
+				</tr>
 			</tfoot>
 		</table>
 	</body>
