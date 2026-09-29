@@ -1,443 +1,163 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <title>Timetable for Sem V</title>
-
-    <style>
-
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            margin: 0;
-            padding: 30px;
-            background: #fff;
-            font-family: "Times New Roman", serif;
-        }
-
-        .page-header {
-            text-align: center;
-            font-size: 26px;
-            font-weight: bold;
-            color: #000;
-            margin-bottom: 25px;
-        }
-
-        .timetable-container {
-            width: 100%;
-            overflow-x: auto;
-        }
-
-        table {
-            border-collapse: collapse;
-            width: 100%;
-            min-width: 1250px;
-            table-layout: fixed;
-            border: 2px solid #000;
-        }
-
-        th,
-        td {
-            border: 2px solid #000;
-            text-align: center;
-            vertical-align: middle;
-            padding: 0;
-        }
-
-        .day-time {
-            width: 155px;
-            height: 85px;
-            background: #fff;
-            color: #000;
-            font-size: 15px;
-            font-weight: bold;
-        }
-
-        thead th {
-            height: 85px;
-            background: #fff;
-        }
-
-        .time {
-            font-size: 15px;
-            font-weight: bold;
-            line-height: 1.4;
-            color: #000;
-        }
-
-        .day {
-            width: 155px;
-            height: 75px;
-            text-align: left;
-            padding-left: 30px;
-            font-size: 17px;
-            font-weight: bold;
-            color: #6b2929;
-            white-space: nowrap;
-        }
-
-        .subject,
-        .free {
-            height: 75px;
-            font-size: 16px;
-            font-weight: bold;
-            text-align: center;
-            vertical-align: middle;
-        }
-
-        .subject {
-            color: #000;
-        }
-
-        .free {
-            color: #65733a;
-        }
-
-        .tea-break {
-            width: 65px;
-            background: #eee !important;
-            color: #555;
-            font-size: 13px;
-            font-weight: bold;
-            text-align: center;
-            vertical-align: middle;
-            writing-mode: vertical-rl;
-            transform: rotate(180deg);
-            letter-spacing: 1px;
-        }
-
-        .monday td,
-        .wednesday td,
-        .friday td {
-            background: #d9eff7;
-        }
-
-        .tuesday td,
-        .thursday td,
-        .saturday td {
-            background: #fff4cc;
-        }
-
-        .ai-highlight {
-            background: #e8d9ff !important;
-            color: #000 !important;
-        }
-
-        .minor-project {
-            background: #ead9c5 !important;
-            color: #000 !important;
-        }
-
-        .lab-highlight {
-            background: #ffe0c2 !important;
-            color: #000 !important;
-        }
-
-        .table-footer {
-            height: 55px;
-            background: #fff !important;
-            color: #000;
-            font-size: 16px;
-            font-weight: bold;
-            text-align: center;
-            vertical-align: middle;
-        }
-
-        @media (max-width: 900px) {
-
-            body {
-                padding: 15px;
-            }
-
-            .page-header {
-                font-size: 22px;
-            }
-
-            table {
-                min-width: 1250px;
-            }
-
-            .day {
-                font-size: 16px;
-            }
-
-            .subject,
-            .free {
-                font-size: 15px;
-            }
-
-            .table-footer {
-                font-size: 16px;
-            }
-
-        }
-
-    </style>
-
-</head>
-
-<body>
-
-<header class="page-header">
-    TIMETABLE FOR SEM V
-</header>
-
-<div class="timetable-container">
-
-    <table>
-
-        <thead>
-
-            <tr>
-
-                <th class="day-time">
-                    DAY / TIME
-                </th>
-
-                <th class="time">
-                    8:00 AM -<br>
-                    9:00 AM
-                </th>
-
-                <th class="time">
-                    9:00 AM -<br>
-                    10:00 AM
-                </th>
-
-                <th class="time">
-                    10:00 AM -<br>
-                    10:30 AM
-                </th>
-
-                <th class="time">
-                    10:30 AM -<br>
-                    11:30 AM
-                </th>
-
-                <th class="time">
-                    11:30 AM -<br>
-                    12:30 PM
-                </th>
-
-                <th class="time">
-                    12:30 PM -<br>
-                    1:30 PM
-                </th>
-
-                <th class="time">
-                    1:30 PM -<br>
-                    2:30 PM
-                </th>
-
-                <th class="time">
-                    2:30 PM -<br>
-                    3:30 PM
-                </th>
-
-                <th class="time">
-                    3:30 PM -<br>
-                    4:30 PM
-                </th>
-
-            </tr>
-
-        </thead>
-
-        <tbody>
-
-            <tr class="monday">
-
-                <td class="day">
-                    MONDAY
-                </td>
-
-                <td class="free" colspan="2"></td>
-
-                <td class="tea-break" rowspan="6">
-                    TEA BREAK
-                </td>
-
-                <td class="subject">
-                    EVS
-                </td>
-
-                <td class="free" colspan="5"></td>
-
-            </tr>
-
-            <tr class="tuesday">
-
-                <td class="day">
-                    TUESDAY
-                </td>
-
-                <td class="subject lab-highlight" colspan="2">
-                    WT LAB
-                </td>
-
-                <td class="subject">
-                    RM
-                </td>
-
-                <td class="subject ai-highlight">
-                    AI
-                </td>
-
-                <td class="subject">
-                    SE
-                </td>
-
-                <td class="subject">
-                    TOC
-                </td>
-
-                <td class="subject">
-                    CNS
-                </td>
-
-                <td class="free"></td>
-
-            </tr>
-
-            <tr class="wednesday">
-
-                <td class="day">
-                    WEDNESDAY
-                </td>
-
-                <td class="subject minor-project" colspan="2">
-                    MINOR PROJECT
-                </td>
-
-                <td class="free"></td>
-
-                <td class="free"></td>
-
-                <td class="subject">
-                    TOC
-                </td>
-
-                <td class="subject ai-highlight">
-                    AI
-                </td>
-
-                <td class="subject">
-                    SE
-                </td>
-
-                <td class="subject">
-                    RM
-                </td>
-
-            </tr>
-
-            <tr class="thursday">
-
-                <td class="day">
-                    THURSDAY
-                </td>
-
-                <td class="subject lab-highlight" colspan="2">
-                    CNS LAB
-                </td>
-
-                <td class="subject">
-                    TOC
-                </td>
-
-                <td class="subject">
-                    SE
-                </td>
-
-                <td class="subject">
-                    CNS
-                </td>
-
-                <td class="free" colspan="3"></td>
-
-            </tr>
-
-            <tr class="friday">
-
-                <td class="day">
-                    FRIDAY
-                </td>
-
-                <td class="free"></td>
-
-                <td class="subject">
-                    TOC
-                </td>
-
-                <td class="subject">
-                    SE
-                </td>
-
-                <td class="subject">
-                    CNS
-                </td>
-
-                <td class="free"></td>
-
-                <td class="subject">
-                    RM
-                </td>
-
-                <td class="subject ai-highlight">
-                    AI
-                </td>
-
-                <td class="free"></td>
-
-            </tr>
-
-            <tr class="saturday">
-
-                <td class="day">
-                    SATURDAY
-                </td>
-
-                <td class="free"></td>
-
-                <td class="free"></td>
-
-                <td class="subject minor-project" colspan="3">
-                    MINOR PROJECT
-                </td>
-
-                <td class="free"></td>
-
-                <td class="free"></td>
-
-                <td class="free"></td>
-
-            </tr>
-
-        </tbody>
-
-        <tfoot>
-
-            <tr>
-
-                <td class="table-footer" colspan="10">
-                    End of TIMETABLE
-                </td>
-
-            </tr>
-
-        </tfoot>
-
-    </table>
-
-</div>
-
-</body>
-
+<html>
+	<head>
+		<title>Timetable</title>
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+			* {
+				box-sizing: border-box;
+				text-align: center;
+				font-family: "Roboto", serif;
+			}
+
+			h1{
+				font-weight:900;
+				margin:0.5rem;
+			}
+
+			body {
+				display: flex;
+				flex-direction: column;
+				justify-content:center;
+				align-items:center;
+			}
+
+			table {
+				border-collapse: collapse;
+				width: 100%;
+				border: 1px solid #ccc;
+				font-size:0.8rem;
+			}
+
+			th, td {
+				border: 1px solid #ccc;
+				text-align: center;
+				width: 4rem;
+				height: 4rem;
+			}
+
+			thead th, tfoot th {
+				background: #222;
+				color: white;
+			}
+
+			tbody tr:nth-child(odd) {
+				background: #e5e7eb;
+			}
+
+			tbody tr:nth-child(even) {
+				background: #cbd5e1;
+			}
+
+			.evs { background: #d9f2e6; }
+			.wt-lab { background: #fff3cd; }
+			.rm { background: #e3f0ff; }
+			.ai { background: #e3f7e8; }
+			.se { background: #eee7ff; }
+			.toc { background: #fff0df; }
+			.cns { background: #e2f8fa; }
+			.project { background: #f8e6fc; }
+			.yoga { background: #eeeeee; }
+			.break { background: #fbe4e4; }
+		</style>
+	</head>
+	<body>
+		<h1>TIMETABLE</h1>
+		<table>
+			<thead>
+				<tr>
+					<th>Day / Time</th>
+					<th>8:00AM to 9:00AM</th>
+					<th>9:00AM to 10:00AM</th>
+					<th>10:00AM to 10:30AM</th>
+					<th>10:30AM to 11:30AM</th>
+					<th>11:30AM to 12:30PM</th>
+					<th>12:30PM to 1:30PM</th>
+					<th>1:30PM to 2:30PM</th>
+					<th>2:30PM to 3:30PM</th>
+					<th>3:30PM to 4:30PM</th>
+					<th>4:30PM to 5:30PM</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr>
+					<th>Monday</th>
+					<td></td>
+					<td></td>
+					<td rowspan="6" class="break">Tea Break</td>
+					<td class="evs">EVS<br>CHS<br>Online</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+
+				<tr>
+					<th>Tuesday</th>
+					<td colspan="2" class="wt-lab">WT Lab<br>D3+D4<br>503</td>
+					<td class="rm">RM<br>MNS<br>519</td>
+					<td class="ai">AI<br>SL<br>519</td>
+					<td></td>
+					<td class="se">SE<br>GR<br>511</td>
+					<td class="toc">TOC<br>NT<br>511</td>
+					<td class="cns">CNS<br>GHS<br>511</td>
+					<td></td>
+				</tr>
+
+				<tr>
+					<th>Wednesday</th>
+					<td colspan="2" class="project">Minor Project</td>
+					<td></td>
+					<td></td>
+					<td class="toc">TOC<br>NT<br>521</td>
+					<td class="ai">AI<br>SL<br>521</td>
+					<td class="se">SE<br>GR<br>521</td>
+					<td class="rm">RM<br>MNS<br>521</td>
+					<td></td>
+				</tr>
+
+				<tr>
+					<th>Thursday</th>
+					<td colspan="2" class="cns">CNS Lab<br>D3+D4<br>527A</td>
+					<td class="toc">TOC<br>NT<br>525</td>
+					<td class="se">SE<br>GR<br>525</td>
+					<td class="cns">CNS<br>GHS<br>525</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+
+				<tr>
+					<th>Friday</th>
+					<td class="yoga">Yoga</td>
+					<td class="toc">TOC<br>NT<br>517</td>
+					<td class="se">SE<br>GR<br>517</td>
+					<td class="cns">CNS<br>GHS<br>517</td>
+					<td></td>
+					<td class="rm">RM<br>MNS<br>521</td>
+					<td class="ai">AI<br>SL<br>521</td>
+					<td></td>
+					<td></td>
+				</tr>
+
+				<tr>
+					<th>Saturday</th>
+					<td></td>
+					<td></td>
+					<td colspan="3" class="project">Minor Project</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</tbody>
+
+			<tfoot>
+				<tr><th colspan="11">End of Timetable</th></tr>
+			</tfoot>
+		</table>
+	</body>
 </html>
